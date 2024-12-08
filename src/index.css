@@ -25,7 +25,8 @@ a:hover {
 body {
 	margin: 0;
 	display: flex;
-	place-items: center;
+	align-items: center;
+	justify-content: center;
 	min-width: 320px;
 	min-height: 100vh;
 }
@@ -68,8 +69,17 @@ button:focus-visible {
 }
 
 #quote-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	border: 1px solid white;
 	height: 300px;
 	width: 500px;
 	color: white;
+}
+
+#text,
+#author {
+	text-align: center;
 }

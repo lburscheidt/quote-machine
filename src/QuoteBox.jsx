@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { getNewQuote, tweetQuote } from "./QuoteBoxFunctions";
+import { getNewQuote, tweetQuote, buildURL } from "./QuoteBoxFunctions";
 export class QuoteBox extends React.Component {
 	constructor(props) {
 		super(props);
@@ -54,11 +54,17 @@ class TweetButton extends React.Component {
 	}
 	render() {
 		return (
-			<a id="tweet-quote" target="_blank" rel="noreferrer" onClick={tweetQuote}>
-				<button type="button" id="tweet-quote">
+			<button type="button">
+				<a
+					id="tweet-quote"
+					target="_blank"
+					rel="noreferrer"
+					onClick={tweetQuote}
+					href={buildURL}
+				>
 					Tweet Quote
-				</button>
-			</a>
+				</a>
+			</button>
 		);
 	}
 }

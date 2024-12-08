@@ -21,3 +21,7 @@ export function tweetQuote() {
 	);
 	//	return tweetURL;
 }
+
+const text = document.querySelector("#text");
+const author = document.querySelector("#author");
+export const buildURL = `https://twitter.com/intent/tweet/text=${text} - ${author}`;
